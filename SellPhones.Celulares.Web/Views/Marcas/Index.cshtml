@@ -1,0 +1,73 @@
+﻿@model IEnumerable<SellPhones.Celulares.Web.ViewModels.Marca.MarcaIndexViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    <div class="col-md-10">
+        <input type="text" id="pesquisaMarca" class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <button id="btnPesquisarMarca">Pesquisar</button>
+    </div>
+</div>
+
+<table class="table" id="listaMarcas">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody id="listaMarcasBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@section Scripts{
+    <script>
+        $('#btnPesquisarMarca').on('click', function filtrarPorNome() {
+            $.ajax({
+                url: "/marcas/filterbyname/",
+                data: { search: $("#pesquisaMarca").val() },
+                type: "get",
+                dataType: "json",
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $("#listaMarcasBody").empty();
+                    $("#listaAlbuns").append("erro");
+                },
+                success: function (data, textStatus, XMLHttpREquest) {
+                    $("#listaMarcasBody").empty();
+                    var trHTML = '';
+                    $.each(data, function (i, item) {
+                        trHTML += '<tr><td>' + item.Nome + '</td></tr>';
+                    })
+                    $("#listaMarcas").append(trHTML)
+                }
+            })
+        })
+    </script>
+}

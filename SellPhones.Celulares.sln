@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Web", "SellPhones.Celulares.Web\SellPhones.Celulares.Web.csproj", "{110A7B19-5040-4498-AE58-813C6A23A4D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{32F4559B-C485-47D2-8ABB-2135877E4DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Business", "SellPhones.Celulares.Business\SellPhones.Celulares.Business.csproj", "{AD523595-776F-4D84-9C37-D2F60642FFA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9DB87448-5396-4E1A-A759-0E84EE7F59FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Data.Entity", "SellPhones.Celulares.Data.Entity\SellPhones.Celulares.Data.Entity.csproj", "{0DC607ED-E32F-4898-B48F-FE8D6FB24283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Generic.Entity", "SellPhones.Celulares.Generic.Entity\SellPhones.Celulares.Generic.Entity.csproj", "{767F1A79-E527-41AD-ACEF-4A1BC7CCC37A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{56DD00B0-8D90-4662-88AE-A033DD7918D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Repositories.Common", "SellPhones.Celulares.Repositories.Common\SellPhones.Celulares.Repositories.Common.csproj", "{752BDA21-1319-4360-8656-7C4573C2A3AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Repositories.Common.Entity", "SellPhones.Celulares.Repositories.Common.Entity\SellPhones.Celulares.Repositories.Common.Entity.csproj", "{5F7F5402-C8B1-4319-8D23-50A8C8FED0E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellPhones.Celulares.Repositories.Entity", "SellPhones.Celulares.Repositories.Entity\SellPhones.Celulares.Repositories.Entity.csproj", "{B7C59F7A-B31D-4F63-A20A-314978DC5DAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{110A7B19-5040-4498-AE58-813C6A23A4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110A7B19-5040-4498-AE58-813C6A23A4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110A7B19-5040-4498-AE58-813C6A23A4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110A7B19-5040-4498-AE58-813C6A23A4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD523595-776F-4D84-9C37-D2F60642FFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD523595-776F-4D84-9C37-D2F60642FFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD523595-776F-4D84-9C37-D2F60642FFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD523595-776F-4D84-9C37-D2F60642FFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC607ED-E32F-4898-B48F-FE8D6FB24283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC607ED-E32F-4898-B48F-FE8D6FB24283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC607ED-E32F-4898-B48F-FE8D6FB24283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC607ED-E32F-4898-B48F-FE8D6FB24283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767F1A79-E527-41AD-ACEF-4A1BC7CCC37A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767F1A79-E527-41AD-ACEF-4A1BC7CCC37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767F1A79-E527-41AD-ACEF-4A1BC7CCC37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767F1A79-E527-41AD-ACEF-4A1BC7CCC37A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752BDA21-1319-4360-8656-7C4573C2A3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752BDA21-1319-4360-8656-7C4573C2A3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752BDA21-1319-4360-8656-7C4573C2A3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752BDA21-1319-4360-8656-7C4573C2A3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F7F5402-C8B1-4319-8D23-50A8C8FED0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7F5402-C8B1-4319-8D23-50A8C8FED0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7F5402-C8B1-4319-8D23-50A8C8FED0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7F5402-C8B1-4319-8D23-50A8C8FED0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C59F7A-B31D-4F63-A20A-314978DC5DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C59F7A-B31D-4F63-A20A-314978DC5DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C59F7A-B31D-4F63-A20A-314978DC5DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C59F7A-B31D-4F63-A20A-314978DC5DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD523595-776F-4D84-9C37-D2F60642FFA5} = {32F4559B-C485-47D2-8ABB-2135877E4DDA}
+		{0DC607ED-E32F-4898-B48F-FE8D6FB24283} = {9DB87448-5396-4E1A-A759-0E84EE7F59FC}
+		{767F1A79-E527-41AD-ACEF-4A1BC7CCC37A} = {9DB87448-5396-4E1A-A759-0E84EE7F59FC}
+		{752BDA21-1319-4360-8656-7C4573C2A3AE} = {56DD00B0-8D90-4662-88AE-A033DD7918D3}
+		{5F7F5402-C8B1-4319-8D23-50A8C8FED0E0} = {56DD00B0-8D90-4662-88AE-A033DD7918D3}
+		{B7C59F7A-B31D-4F63-A20A-314978DC5DAA} = {56DD00B0-8D90-4662-88AE-A033DD7918D3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92664B9D-AE6B-44BA-9252-027A554C561C}
+	EndGlobalSection
+EndGlobal
