@@ -30,7 +30,7 @@ namespace SellPhones.Celulares.Web.ViewModels.Celular
         [Display(Name = "Preço do celular")]
         public float Preco { get; set; }
 
-        //[IMEI(ErrorMessage = "O IMEI inserido é inválido.")]
+        [IMEI(ErrorMessage = "O IMEI inserido é inválido.")]
         [MaxLength(15, ErrorMessage = "O IMEI deve ter no máximo 15 caracteres.")]
         [Display(Name = "IMEI do celular")]
         public string Imei { get; set; }
