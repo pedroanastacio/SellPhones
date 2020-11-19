@@ -62,8 +62,13 @@
                 success: function (data, textStatus, XMLHttpREquest) {
                     $("#listaMarcasBody").empty();
                     var trHTML = '';
-                    $.each(data, function (i, item) {
-                        trHTML += '<tr><td>' + item.Nome + '</td></tr>';
+                    $.each(data, function (i, marca) {
+                        trHTML += '<tr><td>' +
+                            marca.Nome + '</td><td>' +
+                            "<a href='/Marcas/Edit/" + marca.Id + "'>Editar</a>" + " | " +
+                            "<a href='/Marcas/Details/" + marca.Id + "'>Detalhar</a>" + " | " +
+                            "<a href='/Marcas/Delete/" + marca.Id + "'>Excluir</a>" + " | " +
+                            '</td></tr>';
                     })
                     $("#listaMarcas").append(trHTML)
                 }
