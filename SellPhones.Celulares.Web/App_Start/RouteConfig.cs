@@ -14,6 +14,12 @@ namespace SellPhones.Celulares.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+               name: "FilterByName",
+               url: "Marcas/FilterByName/{search}",
+               defaults: new { controller = "Marcas", action = "FilterByName", search = UrlParameter.Optional }
+               );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

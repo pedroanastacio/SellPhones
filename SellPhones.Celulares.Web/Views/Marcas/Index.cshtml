@@ -54,7 +54,7 @@
             $("#btnPesquisarMarca").click(function () {
                 var termoPesquisa = $("#pesquisaMarca").val();
                 $.ajax({
-                    url: "/marcas/filterbyname?search=" + termoPesquisa,
+                    url: "/marcas/filterbyname/" + termoPesquisa,
                     error: function (data) {
                         alert("Houve um erro na pesquisa");
                     },
