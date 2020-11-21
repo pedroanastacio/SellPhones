@@ -29,7 +29,7 @@
         </tr>
     </thead>
 
-    <tbody id="listaMarcasBody">
+    <tbody>
         @foreach (var item in Model)
         {
             <tr>
@@ -48,31 +48,32 @@
 </table>
 
 @section Scripts{
-    <script>
-        $('#btnPesquisarMarca').on('click', function filtrarPorNome() {
-            $.ajax({
-                url: "/marcas/filterbyname/",
-                data: { search: $("#pesquisaMarca").val() },
-                type: "get",
-                dataType: "json",
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    $("#listaMarcasBody").empty();
-                    $("#listaAlbuns").append("erro");
-                },
-                success: function (data, textStatus, XMLHttpREquest) {
-                    $("#listaMarcasBody").empty();
-                    var trHTML = '';
-                    $.each(data, function (i, marca) {
-                        trHTML += '<tr><td>' +
-                            marca.Nome + '</td><td>' +
-                            "<a href='/Marcas/Edit/" + marca.Id + "'>Editar</a>" + " | " +
-                            "<a href='/Marcas/Details/" + marca.Id + "'>Detalhar</a>" + " | " +
-                            "<a href='/Marcas/Delete/" + marca.Id + "'>Excluir</a>" + " | " +
-                            '</td></tr>';
-                    })
-                    $("#listaMarcas").append(trHTML)
-                }
+    <script type="text/javascript">
+
+        $(document).ready(function () { 
+            $("#btnPesquisarMarca").click(function () {
+                var termoPesquisa = $("#pesquisaMarca").val();
+                $.ajax({
+                    url: "/marcas/filterbyname?search=" + termoPesquisa,
+                    error: function (data) {
+                        alert("Houve um erro na pesquisa");
+                    },
+                    success: function (data) {
+                        $("#listaMarcas tbody > tr").remove();
+                        $.each(data, function (i, marca) {
+                            $("#listaMarcas tbody").append(
+                                '<tr><td>' +
+                                marca.Nome + '</td><td>' +
+                                "<a href='/Marcas/Edit/" + marca.Id + "'>Editar</a>" + " | " +
+                                "<a href='/Marcas/Details/" + marca.Id + "'>Detalhar</a>" + " | " +
+                                "<a href='/Marcas/Delete/" + marca.Id + "'>Excluir</a>" + " | " +
+                                '</td></tr>'
+                            )
+                        })
+                    }
+                })
             })
         })
+
     </script>
 }
