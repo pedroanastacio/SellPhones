@@ -11,16 +11,20 @@ using SellPhones.Celulares.Business;
 using SellPhones.Celulares.Data.Entity.Context;
 using SellPhones.Celulares.Repositories.Common;
 using SellPhones.Celulares.Repositories.Entity;
+using SellPhones.Celulares.Web.Filters;
 using SellPhones.Celulares.Web.ViewModels.Marca;
 
 namespace SellPhones.Celulares.Web.Controllers
 {
+    [Authorize]
+    [LogActionFilter]
     public class MarcasController : Controller
     {
         private IRepositoryGeneric<Marca, int>
            repositoryMarcas = new MarcasRepository(new CelularDbContext());
 
         // GET: Marcas
+        
         public ActionResult Index()
         {
             return View(Mapper.Map<List<Marca>, List<MarcaIndexViewModel>>(repositoryMarcas.Select()));
